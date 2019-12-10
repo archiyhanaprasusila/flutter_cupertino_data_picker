@@ -1,8 +1,3 @@
-///
-/// author: Simon Chen
-/// since: 2018/09/13
-/// fork by Dylan Wu
-///
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +13,7 @@ class DataPicker {
     BuildContext context, {
     bool showTitleActions: true,
     @required List<dynamic> datas,
-    int selectedIndex,
+    int selectedIndex: 0,
     DateChangedCallback onChanged,
     DateChangedCallback onConfirm,
     suffix: '',
@@ -117,7 +112,7 @@ class _DataPickerComponent extends StatefulWidget {
   _DataPickerComponent({
     Key key,
     @required this.route,
-    @required this.initialData,
+    this.initialData: 0,
     this.datas,
     this.onChanged,
     this.locale,
@@ -140,8 +135,8 @@ class _DataPickerComponent extends StatefulWidget {
 }
 
 class _DatePickerState extends State<_DataPickerComponent> {
-  int _initialIndex=0;
-  int _selectedColorIndex= 0;
+  int _initialIndex;
+  int _selectedColorIndex = 0;
   FixedExtentScrollController dataScrollCtrl;
 
   _DatePickerState(this._initialIndex) {
@@ -149,7 +144,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
       this._initialIndex = 0;
     }
     dataScrollCtrl =
-        new FixedExtentScrollController(initialItem: _initialIndex);
+        new FixedExtentScrollController(initialItem: _selectedColorIndex);
   }
 
   @override
@@ -311,7 +306,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
 
     switch (lang) {
       case 'en':
-        return 'Selesai';
+        return 'Done';
         break;
 
       case 'zh':
@@ -326,7 +321,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
 
   String _localeCancel() {
     if (widget.locale == null) {
-      return 'Batal';
+      return 'Cancel';
     }
 
     String lang = widget.locale.split('_').first;
