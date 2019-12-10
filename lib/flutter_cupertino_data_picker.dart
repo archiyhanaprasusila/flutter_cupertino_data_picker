@@ -309,7 +309,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
 
     switch (lang) {
       case 'en':
-        return 'Done';
+        return 'Selesai';
         break;
 
       case 'zh':
@@ -331,7 +331,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
 
     switch (lang) {
       case 'en':
-        return 'Cancel';
+        return 'Batal';
         break;
 
       case 'zh':
