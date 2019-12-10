@@ -149,7 +149,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
       this._initialIndex = 0;
     }
     dataScrollCtrl =
-        new FixedExtentScrollController(initialItem: _selectedColorIndex);
+        new FixedExtentScrollController(initialItem: _initialIndex);
   }
 
   @override
