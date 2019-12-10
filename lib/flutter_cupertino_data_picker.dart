@@ -112,7 +112,7 @@ class _DataPickerComponent extends StatefulWidget {
   _DataPickerComponent({
     Key key,
     @required this.route,
-    this.initialData: 0,
+    this.initialData,
     this.datas,
     this.onChanged,
     this.locale,
