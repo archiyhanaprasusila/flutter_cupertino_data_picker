@@ -140,7 +140,7 @@ class _DataPickerComponent extends StatefulWidget {
 }
 
 class _DatePickerState extends State<_DataPickerComponent> {
-  int _initialIndex;
+  int _initialIndex=0;
   int _selectedColorIndex;
   FixedExtentScrollController dataScrollCtrl;
 
