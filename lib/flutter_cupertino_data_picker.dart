@@ -13,7 +13,7 @@ class DataPicker {
     BuildContext context, {
     bool showTitleActions: true,
     @required List<dynamic> datas,
-    int selectedIndex: 0,
+    int selectedIndex,
     DateChangedCallback onChanged,
     DateChangedCallback onConfirm,
     suffix: '',
