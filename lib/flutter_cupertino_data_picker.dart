@@ -257,7 +257,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
             height: _kDatePickerTitleHeight,
             child: FlatButton(
               child: Text(
-                '$cancel',
+                '$Batal',
                 style: TextStyle(
                   color: Theme.of(context).unselectedWidgetColor,
                   fontSize: 16.0,
@@ -281,7 +281,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
             height: _kDatePickerTitleHeight,
             child: FlatButton(
               child: Text(
-                '$done',
+                '$Selesai',
                 style: TextStyle(
                   color: Theme.of(context).primaryColor,
                   fontSize: 16.0,
