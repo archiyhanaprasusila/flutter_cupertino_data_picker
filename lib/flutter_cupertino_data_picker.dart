@@ -18,7 +18,7 @@ class DataPicker {
     BuildContext context, {
     bool showTitleActions: true,
     @required List<dynamic> datas,
-    int selectedIndex: 0,
+    int selectedIndex,
     DateChangedCallback onChanged,
     DateChangedCallback onConfirm,
     suffix: '',
@@ -117,7 +117,7 @@ class _DataPickerComponent extends StatefulWidget {
   _DataPickerComponent({
     Key key,
     @required this.route,
-    this.initialData: 0,
+    @required this.initialData,
     this.datas,
     this.onChanged,
     this.locale,
@@ -141,7 +141,7 @@ class _DataPickerComponent extends StatefulWidget {
 
 class _DatePickerState extends State<_DataPickerComponent> {
   int _initialIndex;
-  int _selectedColorIndex = 0;
+  int _selectedColorIndex;
   FixedExtentScrollController dataScrollCtrl;
 
   _DatePickerState(this._initialIndex) {
@@ -311,7 +311,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
 
     switch (lang) {
       case 'en':
-        return 'Done';
+        return 'Selesai';
         break;
 
       case 'zh':
@@ -326,7 +326,7 @@ class _DatePickerState extends State<_DataPickerComponent> {
 
   String _localeCancel() {
     if (widget.locale == null) {
-      return 'Cancel';
+      return 'Batal';
     }
 
     String lang = widget.locale.split('_').first;
